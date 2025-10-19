@@ -17,15 +17,17 @@ body {
     border-right: 1px solid #ddd;
     text-align: center;
 
-    /* 👇 These lines vertically center the content */
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* centers vertically */
-    align-items: center;      /* centers horizontally */
-    height: 100vh;            /* sidebar takes full screen height */
-    box-sizing: border-box;   /* ensures padding doesn’t stretch it */
-    padding: 20px;
+    justify-content: flex-start;  /* start from top */
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 33vh;            /* 👈 pushes content down by one-third of screen height */
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 
 
 .sidebar h2 {
