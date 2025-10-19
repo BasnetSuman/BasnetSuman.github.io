@@ -14,11 +14,19 @@ body {
 .sidebar {
     width: 230px;
     background-color: #f4f4f4;
-    padding: 20px;  /* 👈 top, right, bottom, left */
     border-right: 1px solid #ddd;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    text-align: center;
+
+    /* 👇 These lines vertically center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centers vertically */
+    align-items: center;      /* centers horizontally */
+    height: 100vh;            /* sidebar takes full screen height */
+    box-sizing: border-box;   /* ensures padding doesn’t stretch it */
+    padding: 20px;
 }
+
 
 .sidebar h2 {
     font-size: 25px;
