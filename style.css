@@ -37,7 +37,7 @@ body {
 
 .sidebar ul {
     list-style: none;
-    padding: 40px 20px 20px 20px;  /* 👈 top, right, bottom, left */
+    padding: 20px 20px 20px 20px;  /* 👈 top, right, bottom, left */
 }
 
 .sidebar li {
