@@ -15,7 +15,6 @@ body {
     width: 230px;
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
-    text-align: center;
 
     display: flex;
     flex-direction: column;
