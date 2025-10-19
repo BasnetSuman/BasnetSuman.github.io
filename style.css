@@ -17,9 +17,10 @@ body {
     border-right: 1px solid #ddd;
     text-align: center;
 
-    padding-top: 30px;            /* 👈 pushes content down by one-third of screen height */
-    padding-left: 20px;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;  /* 👈 clean and modern way */
 }
 
 
