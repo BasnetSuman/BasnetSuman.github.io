@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 10px;  /* 👈 clean and modern way */
+    padding-top: 30px;  /* 👈 clean and modern way */
 }
 
 
