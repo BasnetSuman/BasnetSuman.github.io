@@ -16,9 +16,8 @@ body {
     background-color: #f4f4f4;
     padding: 20px;  /* 👈 top, right, bottom, left */
     border-right: 1px solid #ddd;
-    
-    justify-content: center;
-    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .sidebar h2 {
