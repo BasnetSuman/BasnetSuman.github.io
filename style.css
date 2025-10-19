@@ -45,9 +45,13 @@ body {
 
 /* Profile photo */
 .profile {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 140px;                 /* Size of your profile photo */
+    height: 140px;
+    object-fit: cover;            /* Ensures image fits inside the circle */
+    border-radius: 50%;           /* Makes it circular */
+    display: block;
+    margin: 0 auto 15px auto;     /* Centers the image in the sidebar */
+    border: 2px solid #003366;    /* Optional: adds a thin border */
 }
 
 /* Main content */
