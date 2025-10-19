@@ -14,7 +14,7 @@ body {
 .sidebar {
     width: 230px;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;  /* 👈 top, right, bottom, left */
     border-right: 1px solid #ddd;
 }
 
