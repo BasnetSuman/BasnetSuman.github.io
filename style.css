@@ -27,7 +27,7 @@ body {
 
 .sidebar ul {
     list-style: none;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;  /* 👈 top, right, bottom, left */
 }
 
 .sidebar li {
