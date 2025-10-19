@@ -17,7 +17,8 @@ body {
     padding: 20px;  /* 👈 top, right, bottom, left */
     border-right: 1px solid #ddd;
     
-    justify-content: center
+    justify-content: center;
+    height: 100vh;
 }
 
 .sidebar h2 {
