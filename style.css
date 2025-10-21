@@ -51,17 +51,15 @@ body {
     text-decoration: underline;
 }
 
-<style>
-  ol {
-    list-style-type: decimal; /* normal numbered list */
-    padding-left: 2em;        /* indentation for the list */
-  }
+ol {
+  list-style-type: decimal;  /* normal numbering */
+  padding-left: 2em;         /* indent entire list */
+}
 
-  ol li {
-    margin-bottom: 8px;       /* space between items */
-    padding-left: 0.5em;      /* small tab after the number */
-  }
-</style>
+ol li {
+  margin-bottom: 8px;        /* space between items */
+  padding-left: 0.5em;       /* tab space after number */
+}
 
 
 /* Profile photo */
