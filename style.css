@@ -51,6 +51,19 @@ body {
     text-decoration: underline;
 }
 
+<style>
+  ol {
+    list-style-type: decimal; /* normal numbered list */
+    padding-left: 2em;        /* indentation for the list */
+  }
+
+  ol li {
+    margin-bottom: 8px;       /* space between items */
+    padding-left: 0.5em;      /* small tab after the number */
+  }
+</style>
+
+
 /* Profile photo */
 .profile {
     width: 140px;                 /* Size of your profile photo */
