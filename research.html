@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | Suman Basnet</title>
     <link rel="stylesheet" href="style.css"> <!-- 👈 This line makes all pages share the same look -->
+    <style>
+        /* Optional internal CSS just for numbering style */
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 1.2em;
+        }
+
+        ol li {
+            counter-increment: item;
+            margin-bottom: 10px;
+            padding-left: 0.5em;
+        }
+
+        ol li::before {
+            content: "[" counter(item) "] ";
+            font-weight: normal;
+        }
+
+        h3 {
+            margin-top: 1.2em;
+            color: #2a5d84;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
