@@ -49,7 +49,15 @@ body {
     text-decoration: underline;
 }
 
+ol {
+  list-style-type: decimal;  /* normal numbering */
+  padding-left: 2em;         /* indent entire list */
+}
 
+ol li {
+  margin-bottom: 8px;        /* space between items */
+  padding-left: 0.5em;       /* tab space after number */
+}
 /* Profile photo */
 .profile {
     width: 140px;                 /* Size of your profile photo */
