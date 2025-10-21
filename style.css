@@ -71,11 +71,18 @@ body {
 }
 
 ol {
-  list-style-type: decimal;  /* normal numbering */
-  padding-left: 2em;         /* indent entire list */
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 1.5em;
 }
 
 ol li {
-  margin-bottom: 8px;        /* space between items */
-  padding-left: 0.5em;       /* tab space after number */
+  counter-increment: item;
+  margin-bottom: 8px;
+}
+
+ol li::before {
+  content: "[" counter(item) "] ";
+  font-weight: bold;
+  color: #2c3e50;
 }
