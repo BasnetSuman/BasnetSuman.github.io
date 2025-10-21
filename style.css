@@ -69,3 +69,19 @@ body {
 .content h1, .content h2, .content h3 {
     color: #003366;
 }
+
+/* Bracketed numbers that respect <ol reversed> and wrap nicely */
+ol.publist {
+  list-style: decimal;          /* use native numbering */
+  list-style-position: outside; /* hanging indent alignment */
+  margin-left: 0;
+  padding-left: 2.2em;          /* controls gap before text */
+}
+
+ol.publist li { margin-bottom: 10px; }
+
+ol.publist li::marker {
+  content: "[" counter(list-item) "] ";
+  font-weight: bold;
+  color: #2c3e50;
+}
