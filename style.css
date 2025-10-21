@@ -69,21 +69,3 @@ body {
 .content h1, .content h2, .content h3 {
     color: #003366;
 }
-
-ol {
-  counter-reset: item;
-  list-style-type: none;
-  padding-left: 1.5em;
-}
-
-ol li {
-  counter-increment: item;
-  margin-bottom: 8px;
-  padding-left: 1.5em;
-}
-
-ol li::before {
-  content: "[" counter(item) "] ";
-  font-weight: normal;
-  color: #2c3e50;
-}
