@@ -82,6 +82,6 @@ ol.publist li { margin-bottom: 10px; }
 
 ol.publist li::marker {
   content: "[" counter(list-item) "] ";
-  font-weight: bold;
+  font-weight: normal;
   color: #2c3e50;
 }
