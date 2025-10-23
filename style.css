@@ -60,6 +60,14 @@ body {
     border: 2px solid #003366;    /* Optional: adds a thin border */
 }
 
+.banner {
+    width: 100%;          /* makes it span full content width */
+    height: auto;         /* preserves aspect ratio */
+    border-radius: 10px;  /* optional: rounded corners */
+    margin-bottom: 20px;  /* spacing below the image */
+    display: block;       /* prevents text wrapping */
+}
+
 /* Main content */
 .content {
     flex: 1;
