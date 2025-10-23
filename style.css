@@ -61,11 +61,12 @@ body {
 }
 
 .banner {
-    width: 100%;          /* makes it span full content width */
+    width: 80%;          /* makes it span full content width */
     height: auto;         /* preserves aspect ratio */
     border-radius: 10px;  /* optional: rounded corners */
     margin-bottom: 20px;  /* spacing below the image */
     display: block;       /* prevents text wrapping */
+    margin: 0 auto 20px auto; /* centers the image horizontally */
 }
 
 /* Main content */
