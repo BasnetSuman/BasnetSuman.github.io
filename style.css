@@ -94,3 +94,9 @@ ol.publist li::marker {
   font-weight: normal;
   color: #2c3e50;
 }
+
+.container { display: flex; flex-direction: row; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+}
