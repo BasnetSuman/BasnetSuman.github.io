@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: "Segoe UI", Roboto, sans-serif;
     background-color: #fafafa;
@@ -93,4 +93,160 @@ ol.publist li::marker {
   content: "[" counter(list-item) "] ";
   font-weight: normal;
   color: #2c3e50;
+} */
+/* ===================
+   GLOBAL STYLES
+=================== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #fafafa;
+    color: #222;
+}
+
+/* Layout container */
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+/* ===================
+   SIDEBAR
+=================== */
+.sidebar {
+    width: 230px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30px;
+    text-align: right;
+}
+
+.sidebar h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #003366;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 0px;
+}
+
+.sidebar a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* ===================
+   PROFILE PHOTO
+=================== */
+.profile {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 2px solid #003366;
+}
+
+/* ===================
+   BANNER IMAGE
+=================== */
+.banner {
+    display: block;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 20px auto; /* centers the image */
+}
+
+/* ===================
+   MAIN CONTENT
+=================== */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.content h1, .content h2, .content h3 {
+    color: #003366;
+}
+
+/* ===================
+   PUBLICATION LIST
+=================== */
+ol.publist {
+  list-style: decimal;
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 2.2em;
+}
+
+ol.publist li {
+  margin-bottom: 10px;
+}
+
+ol.publist li::marker {
+  content: "[" counter(list-item) "] ";
+  font-weight: normal;
+  color: #2c3e50;
+}
+
+/* ===================
+   RESPONSIVE DESIGN
+=================== */
+@media (max-width: 768px) {
+
+  /* Stack layout vertically */
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .sidebar li {
+    margin: 0 10px;
+  }
+
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .banner {
+    width: 95%;  /* slightly wider on mobile */
+  }
 }
