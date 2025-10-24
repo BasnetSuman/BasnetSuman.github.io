@@ -1,4 +1,3 @@
-/* ---------- Base ---------- */
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, sans-serif;
@@ -6,22 +5,21 @@ body {
     color: #222;
 }
 
-/* ---------- Layout ---------- */
 .container {
     display: flex;
-    flex-direction: row;
     min-height: 100vh;
 }
 
-/* ---------- Sidebar ---------- */
+/* Sidebar */
 .sidebar {
     width: 230px;
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    padding-top: 30px;
+    padding-top: 30px;  /* 👈 clean and modern way */
     text-align: right;
 }
 
@@ -34,12 +32,11 @@ body {
 
 .sidebar ul {
     list-style: none;
-    padding: 20px;
-    margin: 0;
+    padding: 20px 20px 20px 20px;  /* 👈 top, right, bottom, left */
 }
 
 .sidebar li {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .sidebar a {
@@ -52,88 +49,48 @@ body {
     text-decoration: underline;
 }
 
-/* ---------- Profile Photo ---------- */
+/* Profile photo */
 .profile {
-    width: 140px;
+    width: 140px;                 /* Size of your profile photo */
     height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: cover;            /* Ensures image fits inside the circle */
+    border-radius: 50%;           /* Makes it circular */
     display: block;
-    margin: 0 auto 15px auto;
-    border: 2px solid #003366;
+    margin: 0 auto 15px auto;     /* Centers the image in the sidebar */
+    border: 2px solid #003366;    /* Optional: adds a thin border */
 }
 
-/* ---------- Banner Image ---------- */
 .banner {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
+    width: 80%;          /* makes it span full content width */
+    height: auto;         /* preserves aspect ratio */
+    border-radius: 10px;  /* optional: rounded corners */
+    margin-bottom: 20px;  /* spacing below the image */
+    display: block;       /* prevents text wrapping */
+    margin: 0 auto 20px auto; /* centers the image horizontally */
 }
 
-/* ---------- Main Content ---------- */
+/* Main content */
 .content {
     flex: 1;
     padding: 40px;
-    overflow-x: hidden;
 }
 
 .content h1, .content h2, .content h3 {
     color: #003366;
 }
 
-/* ---------- Publication List ---------- */
+/* Bracketed numbers that respect <ol reversed> and wrap nicely */
 ol.publist {
-    list-style: decimal;
-    list-style-position: outside;
-    margin-left: 0;
-    padding-left: 2.2em;
+  list-style: decimal;          /* use native numbering */
+  list-style-position: outside; /* hanging indent alignment */
+  margin-left: 0;
+  padding-left: 2.2em;          /* controls gap before text */
 }
 
-ol.publist li {
-    margin-bottom: 10px;
-}
+ol.publist li { margin-bottom: 10px; }
 
 ol.publist li::marker {
-    content: "[" counter(list-item) "] ";
-    font-weight: normal;
-    color: #2c3e50;
-}
-
-/* ---------- Responsive Design ---------- */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;        /* stack sidebar above content */
-    }
-
-    .sidebar {
-        width: 100%;
-        text-align: center;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding: 20px 0;
-    }
-
-    .sidebar ul {
-        padding: 0;
-    }
-
-    .profile {
-        width: 110px;
-        height: 110px;
-        margin-bottom: 10px;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .banner {
-        width: 95%;                   /* slightly wider on phones */
-    }
-
-    ol.publist {
-        padding-left: 1.5em;
-    }
+  content: "[" counter(list-item) "] ";
+  font-weight: normal;
+  color: #2c3e50;
 }
