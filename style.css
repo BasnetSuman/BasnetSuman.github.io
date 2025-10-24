@@ -1,6 +1,4 @@
-/* ===================
-   GLOBAL STYLES
-=================== */
+/* ---------- Base ---------- */
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, sans-serif;
@@ -8,21 +6,18 @@ body {
     color: #222;
 }
 
-/* Layout container */
+/* ---------- Layout ---------- */
 .container {
     display: flex;
-    min-height: 100vh;
     flex-direction: row;
+    min-height: 100vh;
 }
 
-/* ===================
-   SIDEBAR
-=================== */
+/* ---------- Sidebar ---------- */
 .sidebar {
     width: 230px;
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -40,10 +35,11 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 20px;
+    margin: 0;
 }
 
 .sidebar li {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .sidebar a {
@@ -56,9 +52,7 @@ body {
     text-decoration: underline;
 }
 
-/* ===================
-   PROFILE PHOTO
-=================== */
+/* ---------- Profile Photo ---------- */
 .profile {
     width: 140px;
     height: 140px;
@@ -69,88 +63,77 @@ body {
     border: 2px solid #003366;
 }
 
-/* ===================
-   BANNER IMAGE
-=================== */
+/* ---------- Banner Image ---------- */
 .banner {
     display: block;
+    margin: 0 auto 20px auto;
     width: 80%;
     height: auto;
     border-radius: 10px;
-    margin: 0 auto 20px auto; /* centers the image */
 }
 
-/* ===================
-   MAIN CONTENT
-=================== */
+/* ---------- Main Content ---------- */
 .content {
     flex: 1;
     padding: 40px;
+    overflow-x: hidden;
 }
 
 .content h1, .content h2, .content h3 {
     color: #003366;
 }
 
-/* ===================
-   PUBLICATION LIST
-=================== */
+/* ---------- Publication List ---------- */
 ol.publist {
-  list-style: decimal;
-  list-style-position: outside;
-  margin-left: 0;
-  padding-left: 2.2em;
+    list-style: decimal;
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 2.2em;
 }
 
 ol.publist li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 ol.publist li::marker {
-  content: "[" counter(list-item) "] ";
-  font-weight: normal;
-  color: #2c3e50;
+    content: "[" counter(list-item) "] ";
+    font-weight: normal;
+    color: #2c3e50;
 }
 
-/* ===================
-   RESPONSIVE DESIGN
-=================== */
+/* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;        /* stack sidebar above content */
+    }
 
-  /* Stack layout vertically */
-  .container {
-    flex-direction: column;
-  }
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 20px 0;
+    }
 
-  .sidebar {
-    width: 100%;
-    text-align: center;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-  }
+    .sidebar ul {
+        padding: 0;
+    }
 
-  .sidebar ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
+    .profile {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 10px;
+    }
 
-  .sidebar li {
-    margin: 0 10px;
-  }
+    .content {
+        padding: 20px;
+    }
 
-  .profile {
-    width: 100px;
-    height: 100px;
-  }
+    .banner {
+        width: 95%;                   /* slightly wider on phones */
+    }
 
-  .content {
-    padding: 20px;
-  }
-
-  .banner {
-    width: 95%;  /* slightly wider on mobile */
-  }
+    ol.publist {
+        padding-left: 1.5em;
+    }
 }
