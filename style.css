@@ -95,7 +95,7 @@ ol.publist li::marker {
   color: #2c3e50;
 }
 
-.container { display: flex; flex-direction: row; }
+.container { display: flex; flex-direction: column; }
 
 @media (max-width: 768px) {
   .container { flex-direction: column; }
