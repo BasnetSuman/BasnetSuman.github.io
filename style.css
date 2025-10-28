@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Segoe UI", Roboto, sans-serif;
+    font-family: 'Crimson Text', serif;
     background-color: #fafafa;
     color: #222;
 }
@@ -8,76 +8,82 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 230px;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ddd;
-
-    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    padding-top: 30px;  /* 👈 clean and modern way */
-    text-align: right;
-}
-
-.sidebar h2 {
-    font-size: 25px;
-    margin-bottom: 15px;
-    color: #003366;
     text-align: center;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 20px 20px 20px 20px;  /* 👈 top, right, bottom, left */
+/* Name styling */
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
 }
 
-.sidebar li {
-    margin-bottom: 0px;
+/* Navigation links below name */
+nav {
+    margin-bottom: 30px;
+    font-size: 17px;
 }
 
-.sidebar a {
-    color: #003366;
+nav a {
+    color: #004080;
     text-decoration: none;
+    margin: 0 6px;
 }
 
-.sidebar a.active,
-.sidebar a:hover {
+nav a.active,
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Profile photo */
-.profile {
-    width: 140px;                 /* Size of your profile photo */
-    height: 140px;
-    object-fit: cover;            /* Ensures image fits inside the circle */
-    border-radius: 50%;           /* Makes it circular */
-    display: block;
-    margin: 0 auto 15px auto;     /* Centers the image in the sidebar */
-    border: 2px solid #003366;    /* Optional: adds a thin border */
-}
-
 .banner {
-    width: 80%;          /* makes it span full content width */
+    width: 100%;          /* makes it span full content width */
     height: auto;         /* preserves aspect ratio */
-    border-radius: 10px;  /* optional: rounded corners */
+    border-radius: 5px;  /* optional: rounded corners */
     margin-bottom: 20px;  /* spacing below the image */
     display: block;       /* prevents text wrapping */
     margin: 0 auto 20px auto; /* centers the image horizontally */
 }
 
-/* Main content */
+/* Main content justified */
 .content {
-    flex: 1;
-    padding: 40px;
+    max-width: 850px;
+    width: 100%;
+    text-align: justify;     /* 👈 makes paragraphs justified */
+}
+
+/* Section headings */
+.content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 35px;
+    margin-bottom: 8px;
+}
+
+/* Paragraph spacing */
+.content p {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .content h1, .content h2, .content h3 {
     color: #003366;
 }
+
+/* Line after header */
+.section-line {
+  width: 80%;              /* length of the line (adjust 50–100%) */
+  max-width: 850px;        /* prevents it from becoming too long */
+  height: 1px;             /* thickness */
+  background-color: #ccc;  /* color of the line */
+  border: none;            /* removes default border */
+  margin: 25px auto 40px auto;  /* spacing: top, right, bottom, left */
+}
+
 
 /* Bracketed numbers that respect <ol reversed> and wrap nicely */
 ol.publist {
@@ -93,10 +99,97 @@ ol.publist li::marker {
   content: "[" counter(list-item) "] ";
   font-weight: normal;
   color: #2c3e50;
-} 
+}
 
-/* .container { display: flex; flex-direction: column; }
 
-@media (max-width: 768px) {
-  .container { flex-direction: column; }
-} */
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+    nav {
+        font-size: 15px;
+    }
+    .banner {
+        width: 95%;
+    }
+}
+
+h1, h2, h3 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 700;
+}
+
+p, a, li {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* ==============CONTACT PAGE =============
+/* --- Contact Page Layout --- */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: flex-start;   /* Top-align image and text */
+  gap: 40px;                 /* Space between image and text */
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Profile photo styling */
+.profile-photo {
+  width: 230px;              /* Adjust size */
+  height: auto;
+  border-radius: 5px;        /* 5px rounded corners */
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+/* Contact details */
+.contact-info {
+  flex: 1;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.contact-info h1 {
+  color: #003366;
+  font-size: 26px;
+  margin-top: 0;
+}
+
+.contact-info a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 75%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}

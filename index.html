@@ -4,43 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Suman Basnet</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        ul {
-            list-style-type: disc;   /* options: disc, circle, square, none */
-            padding-left: 1.5em;     /* space before bullets */
-        }
-
-        ul li {
-            margin-bottom: 6px;      /* space between items */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- 👈 This line makes all pages share the same look -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
 
-    <nav class="sidebar">
-        <img src="SumanBasnet.jpg" alt="Profile Photo" class="profile">
-        <h2>Suman Basnet</h2>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <header>
+    <h1>Suman Basnet</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a> /
+      <a href="research.html">Research</a> /
+      <a href="contact.html">Contact</a>
     </nav>
+  </header>
+
+  <hr class="section-line">
 
     <main class="content">
         <img src="content/bannerPic.png" alt="Research Overview" class="banner">
 
 
-        <h2>Welcome</h2>
+        <!-- <h2>Welcome</h2> -->
         <p>
             I am a Research Fellow at the Clean Energy Research Platform (CERP),
             King Abdullah University of Science and Technology (KAUST), where I work
             on atmospheric and high-pressure combustion leveraging advanced laser diagnostics, CFD, and scientific machine learning.
         </p>
 
-        <h2>Research Interests</h2>
+        <h3>Research Interests</h3>
         <ul>
             <li>Aerospace propulsion</li>
             <li>Turbulent combustion</li>
@@ -48,7 +40,7 @@
             <li>Scientific machine learning</li>
         </ul>
 
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul>
             <li>MS, Space and Astronautical Engineering, La Sapienza University of Rome, 2020 <br>
             Thesis: Turbulent mixing of transcritical jets with Direct Numerical Simulation <br>
